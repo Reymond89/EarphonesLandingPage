@@ -653,9 +653,9 @@ header{
     .hero__container{
         flex-direction: column;
     }
-    .hero__subtext{
+    /* .hero__subtext{
         margin-top: auto;
-    }
+    } */
     .hero__text{
         width: 90%;
         margin: auto;
