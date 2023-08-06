@@ -101,7 +101,7 @@ header{
     right: 110px;
 }
 .hero__text{
-    position: relative;
+    /* position: relative; */
     margin-top: 84px;
     max-width: 468px;
     width: 65%;
@@ -122,13 +122,13 @@ header{
     background-clip: text;
 }
 .hero__subtitle{
-    position: absolute;
-    top: 110px;
+    /* position: absolute;
+    top: 110px; */
     font-size: 3.5rem;
     font-weight: 700;
 }
 .hero__subtext{
-    margin-top: 64px;
+    /* margin-top: 64px; */
     font-size: 1.1rem;
     font-weight: 500;
 }
@@ -164,6 +164,17 @@ header{
 .hero__price{
     font-size: 1.1rem;
     font-weight: 700;
+}
+.hero__sponsor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.sponsor__img{
+    width: 100%;
+    max-width: 100px;
 }
 
 /* Specs Section */
@@ -371,7 +382,7 @@ header{
     min-height: 100vh;
     margin-top: 100px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
 }
@@ -668,16 +679,16 @@ header{
     .hero__title{
         font-size: 4rem;
         z-index: 1;
-        position: absolute;
+        /* position: absolute;
         top: 27px;
-        right: 48px;
+        right: 48px; */
         font-weight: 600;
         margin-left: 11px;
 
     }
     .hero__img{
         width: unset;
-        z-index: 1;
+        z-index: 0;
         max-width: 223px;
         top: -251px;
         right: -89px;
@@ -814,3 +825,4 @@ header{
         top: -68px;
     }
 }
+
