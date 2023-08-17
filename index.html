@@ -15,12 +15,13 @@
 <body>
     <header>
         <nav class="header__navbar" >
-            <img class="header__logo" src="./assets/img/favicon.png" alt="logo">
+            <a href="#home"><img class="header__logo" src="./assets/img/favicon.png" alt="logo"></a>
+            
             <ul class="header__list" id="nav">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#spec">Specs</a></li>
-                <li><a href="#case">Case</a></li>
-                <li><a href="#product">Products</a></li>
+                <li><a class="link active" id="homeLink" href="#home">Home</a></li>
+                <li><a class="link" id="specLink" href="#spec">Specs</a></li>
+                <li><a class="link" href="#case">Case</a></li>
+                <li><a class="link" href="#product">Products</a></li>
             </ul>
             <i class="ri-function-line" id="menu-btn"></i>
             
@@ -38,12 +39,6 @@
                 <button class="hero__button"><i class="ri-shopping-bag-line"></i>Add to bag <span class="hero__price"> $289</span></button>
             </div>
         </div>
-        <!-- <picture class="hero__sponsor">
-            <img class="sponsor__img" src="assets/img/sponsor1.png" alt="sponsor">
-            <img class="sponsor__img" src="assets/img/sponsor2.png" alt="sponsor">
-            <img class="sponsor__img" src="assets/img/sponsor3.png" alt="sponsor">
-            <img class="sponsor__img" src="assets/img/sponsor4.png" alt="sponsor">
-        </picture> -->
     </header>
     <section class="specs__section" id="spec">
         <h2 class="spec__title section__title">Specs</h2>
@@ -177,7 +172,8 @@
     </section>
     <footer class="footer__section">
         <div class="footer__container">
-            <img class="header__logo footer__effect" src="assets/img/logo (2).png" alt="logo">
+            <a href="#home"><img class="header__logo footer__effect" src="assets/img/logo (2).png" alt="logo"></a>
+            
             <div class="footer__text-left footer__effect">
                 <h3 class="footer__title">Products</h3>
                 <p class="footer__description" >Headphones</p>

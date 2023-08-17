@@ -101,7 +101,6 @@ header{
     right: 110px;
 }
 .hero__text{
-    /* position: relative; */
     margin-top: 84px;
     max-width: 468px;
     width: 65%;
@@ -122,13 +121,11 @@ header{
     background-clip: text;
 }
 .hero__subtitle{
-    /* position: absolute;
-    top: 110px; */
+  
     font-size: 3.5rem;
     font-weight: 700;
 }
 .hero__subtext{
-    /* margin-top: 64px; */
     font-size: 1.1rem;
     font-weight: 500;
 }
@@ -164,17 +161,6 @@ header{
 .hero__price{
     font-size: 1.1rem;
     font-weight: 700;
-}
-.hero__sponsor{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.sponsor__img{
-    width: 100%;
-    max-width: 100px;
 }
 
 /* Specs Section */
@@ -335,8 +321,6 @@ header{
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    /* width: 100%;
-    max-width: 250px; */
 }
 .descount__title{
     font-size: 1.3rem;
@@ -547,14 +531,27 @@ header{
     border-radius: 6px;
     color: var(--text-color);
     transition: 0.6s ease-in;
+    font-size: 1.4rem;
 }
-.footer__socialmedia li a:hover{
-    /* transform: scale(2); */
-    color: var(--white-color);
-    /* font-size: 1.1rem; */
+.footer__socialmedia li a .social{
+    transition: 0.6s ease-in all;
 }
-.footer__socialmedia .ri-facebook-fill:hover{
+
+.footer__socialmedia li a .ri-facebook-fill:hover{
+    color: #1773ea;
+}
+.footer__socialmedia li a .ri-instagram-line:hover{
+    color: rgb(240, 25, 201);
+}
+.footer__socialmedia li a .ri-twitter-line:hover{
+    color: #1c9cea;
+}
+.footer__socialmedia li{
+    transition: 0.5s ease-in all;
+}
+.footer__socialmedia li:hover{
     transform: translateY(-20%);
+    
 }
 .footer__name{
     font-size: 0.8rem;
@@ -584,6 +581,21 @@ header{
 }
 .ri-arrow-up-s-line:hover{
     color: var(--black-color);
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+    width: .60rem;
+    border-radius: .5rem;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--scroll-thumb-color);
+    border-radius: .5rem;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--scroll-thumb-color-alt);
+    
 }
 
 /* BreakPoints */
@@ -643,10 +655,11 @@ header{
         color: var(--white-color);
         transform: translateY(-110%);
     }
-    .close{
+    .open{
         transform: translateY(0);
         transition: 0.6 ease-in;
     }
+  
     .header__list li a{
         font-size: 1.3rem;
     }
@@ -664,9 +677,7 @@ header{
     .hero__container{
         flex-direction: column;
     }
-    /* .hero__subtext{
-        margin-top: auto;
-    } */
+  
     .hero__text{
         width: 90%;
         margin: auto;
@@ -679,9 +690,6 @@ header{
     .hero__title{
         font-size: 4rem;
         z-index: 1;
-        /* position: absolute;
-        top: 27px;
-        right: 48px; */
         font-weight: 600;
         margin-left: 11px;
 
@@ -742,9 +750,6 @@ header{
         width: 85%;
         padding: 30px 20px;
     }
-
-  
-
 }
 @media screen and ( max-width: 450px ) {
     .header__list{

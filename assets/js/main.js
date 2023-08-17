@@ -1,33 +1,75 @@
 const menuHamburguer = document.getElementById('menu-btn');
 const menuList = document.getElementById('nav');
+const links = document.querySelectorAll('.link');
+const homeSection = document.querySelector('#home');
+const specSection = document.querySelector('#spec');
+const caseSection = document.querySelector('#case')
+const productSection = document.querySelector('#product')
+
 
 menuHamburguer.addEventListener('click', ()=>{
-    menuList.classList.toggle('close');
+    menuList.classList.toggle('open');
 })
 
-const images = document.querySelectorAll('.animation')
 
-function triggerAnimation(entries) {
-    entries.forEach(entry => {
-        const image = entry.target.querySelector('img');
+links.forEach( link => link.addEventListener( 'click', ()=>{
+    menuList.classList.toggle('open');
+    links.forEach( otherlink => otherlink.classList.remove('active'));
+    link.classList.add('active');
+    menuList.classList.add('open');
+    
+}) )
 
-        image.classList.toggle('unset', entry.isIntersecting );
-    });
+function linkAction() {
+    const menuList = document.getElementById('nav');
+    menuList.classList.toggle('open')
 }
 
-const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0
+links.forEach( link => link.addEventListener( 'click', linkAction) )
+
+function handleClassActive(refSection, idSection) {
+
+ const id = idSection.getAttribute('id')
+
+    // Verifica si la parte superior de la sección está dentro del rango del scroll
+if (refSection.top <= window.innerHeight * 0.01 && refSection.bottom >= window.innerHeight * 0.5) {
+
+ links.forEach(element => {
+     const href = element.getAttribute('href').slice(1)
+     if (href === id ) {
+         element.classList.add('active')
+     }
+ });
+
+} else {
+ links.forEach(element => {
+    const href = element.getAttribute('href').slice(1)
+    if (href === id ) {
+ // Remueve la clase activa si la sección está fuera del rango
+        element.classList.remove('active')
+    }
+
+});
+
+}
 }
 
-const observer = new IntersectionObserver( triggerAnimation, options );
+// Agrega un event listener al evento "scroll"
+window.addEventListener('scroll', function() {
+    // Obtén la posición de la sección en relación con la ventana
+    const refHome = homeSection.getBoundingClientRect();
+    const refSpec = specSection.getBoundingClientRect();
+    const refCase = caseSection.getBoundingClientRect();
+    const refProduct = productSection.getBoundingClientRect();
 
-images.forEach( image =>{
-observer.observe(image)
+    handleClassActive( refHome, homeSection )
+    handleClassActive( refSpec, specSection )
+    handleClassActive( refCase, caseSection )
+    handleClassActive( refProduct, productSection )
+    
+});
 
-})
-
+    
 // Scroll Reveal Animation
 
 const sr = ScrollReveal({
