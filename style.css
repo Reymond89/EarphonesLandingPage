@@ -18,10 +18,12 @@
 }
 html{
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 body{
     background: var(--body-color);
     color: #FFF;
+
 }
 header{
     max-width: 1440px;
@@ -83,6 +85,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .hero__picture{
     position: relative;
@@ -595,7 +598,6 @@ header{
 }
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--scroll-thumb-color-alt);
-    
 }
 
 /* BreakPoints */
