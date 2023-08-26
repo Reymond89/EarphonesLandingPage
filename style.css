@@ -37,6 +37,7 @@ header{
     position: fixed;
     z-index: 2;
     width: 100%;
+    max-width: 1440px;
     display: flex;
     min-height: 50px;
     padding: 10px 50px;
